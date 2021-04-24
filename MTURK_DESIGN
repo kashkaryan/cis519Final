@@ -1,0 +1,40 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+<!-- You must include crowd-form so that your task submits answers to MTurk -->
+<crowd-form answer-format="flatten-objects">
+
+    <!-- The crowd-classifier element will create a tool for the Worker to select the
+           correct answer to your question -->
+    <crowd-classifier 
+        categories="['Negative', 'Neutral', 'Positive']"
+        header="Select the connotation for the header."
+        name="intent">
+
+        <!-- The text you want classified will be substituted for the "text" variable when you 
+               publish a batch with a CSV input file containing multiple text items  -->
+        <classification-target> ${header} </classification-target>
+
+       <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of 
+              good and bad answers here can help get good results. You can include 
+              any HTML here. -->
+        <short-instructions>
+
+      <!-- Use the full-instructions section for more detailed instructions that the 
+            Worker can open while working on the task. Including more detailed 
+            instructions and additional examples of good and bad answers here can
+            help get good results. You can include any HTML here. -->
+      <full-instructions header="Intent Detection Instructions">
+            <p>Select how a header makes you feel. If it makes you feel down, select negative. If there is a positive emotion, select positive. If the header is informative without emotion select neutral.</p>
+            <div>
+                <p><strong>Example: </strong>Club Meeting Moved</p>
+                <p><strong>Intent: </strong>Neutral</p>
+            </div>
+        </full-instructions>
+
+    </crowd-classifier> 
+</crowd-form>
