@@ -14,4 +14,8 @@ From here, using scikit we built 4 types of models that learned on our data set.
 
 Future work needs to be completed regarding how to classify sentiment, and it would be a good idea to build on top of baseline models we have provided as well as to experiment with newer, unsupervised algorithms such as BERT, BART, and ELMo.
 
+### What's Included in the GitHub
+
+We include the results and code we use for Mechanical Turk, the code we used to create and evaluate models on the data set, and the models we discuss in the report, which is linked above along with the data set we obtained and where we obtained the data set from.
+
 
