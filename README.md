@@ -10,3 +10,8 @@ To make the project more interesting and manageable, our team decidede to cultiv
 
 From here, using scikit we built 4 types of models that learned on our data set. The results are delineated in our report [here](https://docs.google.com/document/d/1yyBPh8OmRPIgCCPiCLrzVnYdvOMBwgYXWagA5v2iUiQ/edit?ts=607ccf82#). We train models (Naive Bayes, Random Forest Classifier, SVM, and Logistic Regression) to exhibit the dataset’s accuracy and generalizability in addition to provide a baseline for researchers to further improve their machine learning algorithms for sentiment classification.
 
+### Future Work 
+
+Future work needs to be completed regarding how to classify sentiment, and it would be a good idea to build on top of baseline models we have provided as well as to experiment with newer, unsupervised algorithms such as BERT, BART, and ELMo.
+
+
